@@ -15,7 +15,7 @@ A Chrome extension that attempts to solve the NYT Connections puzzle by extracti
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/nyt-connections-solver.git
+   git clone https://github.com/esawadhana/connections-bot.git
    cd nyt-connections-solver
    ```
 
