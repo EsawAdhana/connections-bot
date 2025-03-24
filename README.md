@@ -73,4 +73,4 @@ A Chrome extension that helps solve the NYT Connections puzzle by extracting the
 
 ## License
 
-MIT License 
+MIT License # connections-bot
