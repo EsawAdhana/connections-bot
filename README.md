@@ -1,6 +1,6 @@
 # NYT Connections Solver
 
-A Chrome extension that helps solve the NYT Connections puzzle by extracting the 16 words and using Claude AI to identify the 4 groups of 4 related words.
+A Chrome extension that attempts to solve the NYT Connections puzzle by extracting the 16 words and using Claude's AI to identify the 4 groups of 4 related words.
 
 ## Features
 
@@ -24,9 +24,9 @@ A Chrome extension that helps solve the NYT Connections puzzle by extracting the
    pip install -r requirements.txt
    ```
 
-3. Create a `.env` file with your Anthropic API key:
+3. Populate line 12 of the 'server.py' file with your API key.
    ```
-   ANTHROPIC_API_KEY=your_api_key_here
+   CLAUDE_API_KEY = "YOUR_API_KEY"
    ```
 
 4. Start the Flask server:
@@ -37,12 +37,8 @@ A Chrome extension that helps solve the NYT Connections puzzle by extracting the
 
 ### 2. Chrome Extension Setup
 
-1. Update the `API_URL` in `background.js` to point to your server:
-   ```javascript
-   const API_URL = 'http://localhost:5000/analyze';
-   ```
 
-2. Load the extension in Chrome:
+1. Load the extension in Chrome:
    - Open Chrome and navigate to `chrome://extensions/`
    - Enable "Developer mode" (toggle in the top right)
    - Click "Load unpacked" and select the extension directory
@@ -55,7 +51,7 @@ A Chrome extension that helps solve the NYT Connections puzzle by extracting the
 3. Click "Extract Words" to find the 16 words on the page
 4. If 16 words are found, the "Solve Puzzle" button will be enabled
 5. Click "Solve Puzzle" to send the words for analysis
-6. The solution will be displayed on the game page
+6. The solution will be displayed within the extension
 
 ## Requirements
 
@@ -68,8 +64,10 @@ A Chrome extension that helps solve the NYT Connections puzzle by extracting the
 
 - If the extension can't find words, try refreshing the page
 - Ensure the Flask server is running before using the extension
-- Check that your API key is correctly set in the `.env` file
+- Check that your API key is correctly inserted in 'server.py'
 - Make sure the extension has permission to access the NYT website
+- As of March 2025, the Claude API is not flawless when it comes to solving the Connections puzzle
+- See this paper for more details: https://web.stanford.edu/class/cs224n/final-reports/256847963.pdf
 
 ## License
 
