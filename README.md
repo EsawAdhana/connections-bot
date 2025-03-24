@@ -67,7 +67,7 @@ A Chrome extension that attempts to solve the NYT Connections puzzle by extracti
 - Check that your API key is correctly inserted in 'server.py'
 - Make sure the extension has permission to access the NYT website
 - As of March 2025, the Claude API is not flawless when it comes to solving the Connections puzzle
-- See this paper for more details: https://web.stanford.edu/class/cs224n/final-reports/256847963.pdf
+- See this paper (not my own) for more details of AI's solving Connections: https://web.stanford.edu/class/cs224n/final-reports/256847963.pdf
 
 ## License
 
